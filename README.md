@@ -1,4 +1,4 @@
-# Hybrid Model Parametrization Notebook
+# Hybrid Model Parametrization Notebook + Importing to JSBACH
 
 This Jupyter notebook provides a workflow for **The parameterizations of a hybrid land-atmosphere model** that integrates process-based equations with machine learning. It is based on the methodology described in:
 
