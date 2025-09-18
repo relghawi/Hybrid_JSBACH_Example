@@ -22,7 +22,7 @@ The notebook demonstrates:
 
 The notebook uses example NetCDF files structured similarly to the ICON-ESM output:
 
-- **Path:** `/example_data/merged_example.nc`  
+- **Unzip** `AT-Neu_exmaple.zip` and change **Path:** `./AT-Neu_exmaple.nc`  
 - **Variables included (sample):**  
   - `T_TEA_NT_conv` – observed temperature  
   - `GPP_NT` – gross primary productivity  
