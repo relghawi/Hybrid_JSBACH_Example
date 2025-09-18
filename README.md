@@ -11,9 +11,9 @@ This Jupyter notebook provides a workflow for **The parameterizations of a hybri
 The notebook demonstrates:
 
 1. **Loading and preprocessing example datasets** relevant for land-atmosphere flux modeling.  
-2. **Initializing the hybrid model**, which combines physical equations (e.g., energy and carbon fluxes) with machine learning to capture unresolved processes.  
-3. **Training and testing the hybrid model** on the example data.  
-4. **Generating predictions** for temperature (`T_TEA_NT_conv`) and gross primary productivity (`GPP_NT`).  
+2. **Initializing the hybrid model**, which combines physical equations (e.g., water and carbon fluxes) with machine learning.  
+3. **Training and testing the hybrid model** on the example dataset of the grassland site AT-Neu.  
+4. **Generating predictions** for transpiration (`T_TEA_NT_conv`) and night-time gross primary productivity (`GPP_NT`).  
 5. **Visualizing model performance**, including scatter plots of observed vs. predicted variables and evaluation metrics.  
 
 ---
@@ -23,11 +23,14 @@ The notebook demonstrates:
 The notebook uses example NetCDF files structured similarly to the ICON-ESM output:
 
 - **Unzip** `AT-Neu_exmaple.zip` and change **Path:** `./AT-Neu_exmaple.nc`  
-- **Variables included (sample):**  
-  - `T_TEA_NT_conv` – observed temperature  
-  - `GPP_NT` – gross primary productivity  
-  - `rad_lai_cl_pft` – radiation absorbed per PFT  
-  - `assimi_carbox_rate_cl` – assimilation rates  
+- **Variables included (sample):**
+  - **Targets:** 
+  - `T_TEA_NT_conv` – observed transpiration  
+  - `GPP_NT` – gross primary productivity
+  - **Latents:**
+  - `assimi_canopy_cond_limited_pft` – stomatal conductance  
+  - `assimi_carbox_rate_max_cl_pft` – maximum carboxylation rates
+  - `assimi_e_transport_rate_max_cl_pft` – maximum electron transport rates
   - Meteorological drivers: `precip_box`, `a2l_t_air_box`, `a2l_q_air_box`, etc.
 
 > These are representative variables used in the hybrid modeling workflow. Users can replace the example dataset with their own NetCDF files, as long as variable names are consistent with the notebook structure.
@@ -37,7 +40,7 @@ The notebook uses example NetCDF files structured similarly to the ICON-ESM outp
 ## Notebook Workflow
 
 1. **Load dependencies**: Python packages including `xarray`, `pandas`, `torch`, `pytorch_lightning`, and `matplotlib`.  
-2. **Data loading**: Convert NetCDF to `xarray.Dataset`, optionally subset by site or canopy layer.  
+2. **Prep**: Normalization module and Indexing. 
 3. **DataModule setup**: Split data into training, validation, and test sets.  
 4. **Hybrid model initialization**: Define neural network parameters and latent variables.  
 5. **Training**: Train the model using PyTorch Lightning, with early stopping and checkpointing.  
