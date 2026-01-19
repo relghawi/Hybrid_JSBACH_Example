@@ -2,13 +2,13 @@
 
 This Jupyter notebook provides a workflow for **The parameterizations of a hybrid land-atmosphere model** that integrates process-based equations with machine learning. It is based on the methodology described in:
 
-**ElGhawi, R., Reimers, C., Schnur, R., Reichstein, M., Körner, M., Carvalhais, N., & Winkler, A. J. (2025). Hybrid-Modeling of Land-Atmosphere Fluxes Using Integrated Machine Learning in the ICON-ESM Modeling Framework. Authorea Preprints.**
+**ElGhawi, R., Reimers, C., Schnur, R., Reichstein, M., Körner, M., Carvalhais, N., & Winkler, A. J. (2025). Hybrid‐modeling of land‐atmosphere fluxes using integrated machine learning in the ICON‐ESM modeling framework. Journal of Advances in Modeling Earth Systems, 17(12), e2025MS005102.**
 
 ---
 
 ## Overview
 
-The notebook demonstrates:
+The notebook demonstrates a small example:
 
 1. **Loading and preprocessing example datasets** relevant for land-atmosphere flux modeling.  
 2. **Initializing the hybrid model**, which combines physical equations (e.g., water and carbon fluxes) with machine learning.  
