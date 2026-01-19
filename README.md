@@ -1,8 +1,19 @@
 # Hybrid Model Parametrization Notebook + Importing to JSBACH
 
-This Jupyter notebook provides a workflow for **The parameterizations of a hybrid land-atmosphere model** that integrates process-based equations with machine learning. It is based on the methodology described in:
+## How to Clone this Repository
+
+To clone this repository (including the linked full model repository), use:
+
+
+git clone --recurse-submodules https://github.com/relghawi/Hybrid_JSBACH_Example.git
+
+This repository provides a workflow for **The parameterizations of a hybrid land-atmosphere model** that integrates process-based equations with machine learning. It is based on the methodology described in:
 
 **ElGhawi, R., Reimers, C., Schnur, R., Reichstein, M., Körner, M., Carvalhais, N., & Winkler, A. J. (2025). Hybrid‐modeling of land‐atmosphere fluxes using integrated machine learning in the ICON‐ESM modeling framework. Journal of Advances in Modeling Earth Systems, 17(12), e2025MS005102.**
+
+- **Full model/**: This subfolder links to the full hybrid JSBACH model code hosted in the `Hybrid-JSBACH` repository (https://github.com/relghawi/Hybrid-JSBACH.git). It contains the complete model implementation used in the paper.
+- **pytorch_fortran_bridge/**: This subfolder links to a small PyTorch–Fortran bridge example demonstrating how the hybrid model can be integrated with Fortran code via a minimal C/C++ interface.
+
 
 ---
 
