@@ -1,0 +1,3 @@
+[submodule "Full model"]
+	path = Full model
+	url = https://github.com/relghawi/Hybrid-JSBACH.git
